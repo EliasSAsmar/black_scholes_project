@@ -2,7 +2,7 @@
  * @file black_scholes.cpp
  * @author Eli Asmar
  */
-
+#include "../include/black_scholes.h"
 #include <iostream>
 #include <cmath>
 

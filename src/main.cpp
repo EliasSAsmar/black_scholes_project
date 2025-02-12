@@ -1,7 +1,9 @@
 #include <iostream>
 #include <omp.h>
-#include "black_scholes.h"
-#include "monte_carlo.h"
+#include "../include/black_scholes.h"
+#include "../include/monte_carlo.h"
+#include "../include/implied_volatility.h"
+
 
 int main() {
     // Sample option parameters
@@ -35,5 +37,10 @@ int main() {
     std::cout << "Monte Carlo Put Price:   " << mcPut << std::endl;
     // std::cout << "Execution Time (Monte Carlo Put): " << (endPut - startPut) << " seconds" << std::endl;
 
+
+    
+    double marketPrice = 10.5;  // Example market-observed call option price
+    double iv = impliedVolatility(marketPrice, S, X, T, r);
+    std::cout << "Implied Volatility: " << iv << std::endl;
     return 0;
 }

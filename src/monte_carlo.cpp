@@ -3,7 +3,7 @@
  * @author Eli Asmar
  */
 
-#include "monte_carlo.h"
+#include "../include/monte_carlo.h"
 
 std::random_device rd;  
 std::mt19937 generator(rd());
